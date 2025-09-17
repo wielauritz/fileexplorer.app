@@ -114,32 +114,19 @@
         .app-logo {
             width: 40px;
             height: 40px;
-            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            background-image: url('https://github.com/CodeMarco05/FileExplorer/raw/main/src-tauri/assets/images/original.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
-            position: relative;
-            overflow: hidden;
         }
 
-        .app-logo::before {
-            content: '';
-            position: absolute;
-            width: 60%;
-            height: 60%;
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 4px;
-        }
-
+        .app-logo::before,
         .app-logo::after {
-            content: '';
-            position: absolute;
-            width: 35%;
-            height: 35%;
-            background: var(--accent-primary);
-            border-radius: 2px;
-            z-index: 1;
+            display: none;
         }
 
         .nav-links {
@@ -187,8 +174,8 @@
 
         .hero-content {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            grid-template-columns: 1fr 1.3fr;
+            gap: 3rem;
             align-items: center;
         }
 
@@ -227,7 +214,7 @@
         .hero-image {
             width: 100%;
             border-radius: 20px;
-            padding: 10px;
+            padding: 6px;
             background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
             box-shadow: 0 20px 60px var(--shadow);
             transform: rotateY(-5deg) rotateX(5deg);
@@ -376,7 +363,7 @@
         }
 
         .stat-number {
-            font-size: 2.5rem;
+            font-size: 2rem;
             font-weight: 800;
             background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
             -webkit-background-clip: text;
@@ -389,6 +376,7 @@
             color: var(--text-secondary);
             font-weight: 500;
             margin-top: 0.5rem;
+            font-size: 0.9rem;
         }
 
         /* Features Section */
@@ -508,7 +496,7 @@
 
         .install-methods {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 2rem;
             margin-top: 2rem;
         }
@@ -821,6 +809,10 @@
                 grid-template-columns: 1fr;
             }
 
+            .install-methods {
+                grid-template-columns: 1fr;
+            }
+
             .team-grid {
                 grid-template-columns: 1fr;
             }
@@ -858,7 +850,7 @@
             }
 
             .stat-number {
-                font-size: 2rem;
+                font-size: 1.8rem;
             }
         }
 
