@@ -101,6 +101,11 @@
             align-items: center;
         }
 
+        nav.container {
+            max-width: 100%;
+            padding: 0 4rem;
+        }
+
         .logo {
             display: flex;
             align-items: center;
@@ -174,6 +179,7 @@
             display: flex;
             align-items: center;
             background: linear-gradient(135deg, var(--bg-secondary), var(--bg-tertiary));
+            margin-top: -100px;
         }
 
         .hero-content {
@@ -217,7 +223,6 @@
             border-radius: 20px 0 0 20px;
             padding: 6px 0 6px 6px;
             background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-            box-shadow: -20px 20px 60px var(--shadow);
             transition: transform 0.3s ease;
         }
 
@@ -228,7 +233,7 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            aspect-ratio: 16/10;
+            aspect-ratio: 3164/1848;
         }
 
         .hero-image:hover {
@@ -264,9 +269,9 @@
             background: var(--bg-card);
             border: 1px solid var(--border-color);
             border-radius: 20px;
-            padding: 2rem;
+            padding: 1rem;
             backdrop-filter: blur(10px);
-            position: fixed;
+            position: absolute;
             bottom: 2rem;
             left: 2rem;
             right: 2rem;
