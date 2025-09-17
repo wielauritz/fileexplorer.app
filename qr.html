@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>QR Redirect</title>
+  <style>
+    html, body {
+      height: 100dvh;
+      width: 100dvw;
+      margin: 0;
+      background: #1a1a2e;
+    }
+  </style>
+  <script>
+    (function () {
+      var rickrollUrl = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+      var defaultUrl  = "/";
+      setTimeout(function () {
+        var goRick = Math.random() < 0.01;
+        window.location.replace(goRick ? rickrollUrl : defaultUrl);
+      }, 30);
+    })();
+  </script>
+</head>
+<body></body>
+</html>
