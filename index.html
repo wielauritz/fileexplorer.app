@@ -818,8 +818,7 @@
             height: 100%;
             background-color: rgba(0, 0, 0, 0.8);
             backdrop-filter: blur(5px);
-        }
-
+        }        
         .modal-content {
             background: var(--bg-secondary);
             margin: 5% auto;
@@ -830,6 +829,11 @@
             max-height: 80vh;
             overflow-y: auto;
             border: 1px solid var(--border-color);
+        }
+
+        .modal-content a {
+            color: var(--text-primary);
+            font-weight: 600;
         }
 
         .modal-header {
@@ -1374,56 +1378,67 @@
                         <div class="install-card">
                             <div class="install-title">
                                 <i class="fab fa-github"></i>
-                                GitHub Releases
+                                Linux Distributions
                             </div>
-                            <p>Download pre-built binaries for your platform:</p>
+                            <p>Available formats: .deb, .rpm, AppImage</p>
                             <div class="code-block">
-                                <span class="comment"># Linux distributions</span><br>
-                                <span class="path">./file-explorer.AppImage</span><br>
-                                <span class="command">sudo dpkg -i</span> <span class="string">file-explorer.deb</span><br>
+                                <span class="comment"># AppImage (recommended)</span><br>
+                                <span class="command">chmod +x</span> <span class="string">file-explorer-x.y.z.AppImage</span><br>
+                                <span class="path">./file-explorer-x.y.z.AppImage</span><br><br>
+                                <span class="comment"># Debian/Ubuntu</span><br>
+                                <span class="command">sudo dpkg -i</span> <span class="string">file-explorer.deb</span><br><br>
+                                <span class="comment"># Red Hat/Fedora</span><br>
                                 <span class="command">sudo rpm -i</span> <span class="string">file-explorer.rpm</span>
                             </div>
                         </div>
 
                         <div class="install-card">
                             <div class="install-title">
-                                <i class="fas fa-hammer"></i>
-                                Build from Source
+                                <i class="fab fa-apple"></i>
+                                macOS
                             </div>
-                            <p>Requirements: Node.js, Rust, Tauri CLI (>2.4.0)</p>
+                            <p>Requires Xcode with build tools installed</p>
                             <div class="code-block">
                                 <span class="comment"># Install Tauri CLI</span><br>
                                 <span class="command">cargo install</span> <span class="string">tauri-cli</span><br><br>
                                 <span class="comment"># Build for production</span><br>
-                                <span class="command">cargo tauri build</span>
+                                <span class="command">cargo tauri build</span><br><br>
+                                <span class="comment"># Binary location:</span><br>
+                                <span class="path">src-tauri/target/release/bundle/macos/</span>
+                            </div>
+                        </div>
+
+                        <div class="install-card">
+                            <div class="install-title">
+                                <i class="fab fa-windows"></i>
+                                Windows
+                            </div>
+                            <p>Generates installer (.exe or .msi)</p>
+                            <div class="code-block">
+                                <span class="comment"># Install Tauri CLI</span><br>
+                                <span class="command">cargo install</span> <span class="string">tauri-cli</span><br><br>
+                                <span class="comment"># Build for production</span><br>
+                                <span class="command">cargo tauri build</span><br><br>
+                                <span class="comment"># Installer location:</span><br>
+                                <span class="path">src-tauri/target/release/bundle/msi/</span>
                             </div>
                         </div>
 
                         <div class="install-card">
                             <div class="install-title">
                                 <i class="fas fa-code"></i>
-                                Development Setup
+                                Build from Source
                             </div>
-                            <p>For developers and contributors:</p>
-                            <div class="code-block">
-                                <span class="comment"># Run development server</span><br>
-                                <span class="command">cargo tauri dev</span><br><br>
-                                <span class="comment"># Run tests</span><br>
-                                <span class="command">cargo test</span> <span class="string">--features full</span>
-                            </div>
-                        </div>
-
-                        <div class="install-card">
-                            <div class="install-title">
-                                <i class="fas fa-rocket"></i>
-                                Quick Start
-                            </div>
-                            <p>Get started in seconds:</p>
+                            <p>Prerequisites: Node.js, Rust, Tauri CLI (>2.4.0)</p>
                             <div class="code-block">
                                 <span class="comment"># Clone repository</span><br>
                                 <span class="command">git clone</span> <span class="path">https://github.com/CodeMarco05/FileExplorer</span><br><br>
-                                <span class="comment"># Start exploring!</span><br>
-                                <span class="command">./file-explorer</span>
+                                <span class="comment"># Install Tauri CLI</span><br>
+                                <span class="command">cargo install</span> <span class="string">tauri-cli</span><br><br>
+                                <span class="comment"># Build for production</span><br>
+                                <span class="command">cargo tauri build</span><br><br>
+                                <span class="comment"># Development server</span><br>
+                                <span class="command">cargo tauri dev</span>
                             </div>
                         </div>
                     </div>
