@@ -44,9 +44,13 @@
             box-sizing: border-box;
         }
 
+        html {
+            background: var(--bg-primary);
+        }
+        
         body {
             font-family: 'Montserrat', sans-serif;
-            background: var(--bg-primary);
+            background: linear-gradient(135deg, rgba(from var(--bg-secondary) r g b / 0.7) 0%, rgba(from var(--bg-tertiary) r g b / 0.7) 50%, rgba(15, 52, 96, 0.7) 100%)
             color: var(--text-primary);
             line-height: 1.6;
             transition: all 0.3s ease;
@@ -54,6 +58,7 @@
         }
 
         .gradient-overlay {
+            display: none;
             position: fixed;
             top: 0;
             left: 0;
@@ -65,13 +70,8 @@
             pointer-events: none;
         }
 
-        [data-theme="light"] .gradient-overlay {
-            background: linear-gradient(135deg, 
-                rgba(246, 248, 250, 0.9) 0%, 
-                rgba(238, 242, 245, 0.8) 30%, 
-                rgba(226, 232, 240, 0.7) 60%, 
-                rgba(203, 213, 225, 0.6) 100%);
-            opacity: 0.5;
+        [data-theme="light"] body {
+            background: linear-gradient(135deg, rgba(246, 248, 250, 0.45) 0%, rgba(238, 242, 245, 0.4) 30%, rgba(226, 232, 240, 0.35) 60%, rgba(203, 213, 225, 0.3) 100%);
         }
 
         .container {
